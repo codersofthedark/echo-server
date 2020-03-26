@@ -3,11 +3,6 @@ dist: xenial
 services:
   - docker
 
-env:
-  global:
-    - DOCKER_URL="docker.quid.com"
-    # travis encrypt DOCKER_USERNAME=codersofthedark
-
 before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
